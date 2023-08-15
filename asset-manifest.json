@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GenomeInfoTech/static/css/main.e6c13ad2.css",
-    "main.js": "/GenomeInfoTech/static/js/main.a4d7f0f3.js",
+    "main.js": "/GenomeInfoTech/static/js/main.47603abe.js",
     "static/js/787.ec08529b.chunk.js": "/GenomeInfoTech/static/js/787.ec08529b.chunk.js",
     "index.html": "/GenomeInfoTech/index.html",
     "main.e6c13ad2.css.map": "/GenomeInfoTech/static/css/main.e6c13ad2.css.map",
-    "main.a4d7f0f3.js.map": "/GenomeInfoTech/static/js/main.a4d7f0f3.js.map",
+    "main.47603abe.js.map": "/GenomeInfoTech/static/js/main.47603abe.js.map",
     "787.ec08529b.chunk.js.map": "/GenomeInfoTech/static/js/787.ec08529b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.a4d7f0f3.js"
+    "static/js/main.47603abe.js"
   ]
 }
