@@ -9,7 +9,7 @@ const ReadMore = ({ children }) => {
   };
   return (
     <div className="text">
-      {isReadMore ? text.slice(0, 400) : text}
+      {isReadMore ? text.slice(0, 380) : text}
       <span onClick={toggleReadMore} className="read-or-hide" style={{color:"rgba(31, 102, 16, .6)", fontSize: "1.3em"}}>
         {isReadMore ? "...read more" : " show less..."}
       </span>
