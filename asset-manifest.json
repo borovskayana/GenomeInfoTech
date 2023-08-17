@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/GenomeInfoTech/static/css/main.e6c13ad2.css",
-    "main.js": "/GenomeInfoTech/static/js/main.0e1898b8.js",
+    "main.css": "/GenomeInfoTech/static/css/main.f57a9904.css",
+    "main.js": "/GenomeInfoTech/static/js/main.f0c1a4bd.js",
     "static/js/787.ec08529b.chunk.js": "/GenomeInfoTech/static/js/787.ec08529b.chunk.js",
     "static/media/co_founder_img_two.jpeg": "/GenomeInfoTech/static/media/co_founder_img_two.9dc320e5c83a5a591abd.jpeg",
     "static/media/earth.jpg": "/GenomeInfoTech/static/media/earth.2920075e4a6d05e64078.jpg",
     "static/media/co_founder_img_one.jpeg": "/GenomeInfoTech/static/media/co_founder_img_one.5f044b44f8d8122f374c.jpeg",
     "index.html": "/GenomeInfoTech/index.html",
-    "main.e6c13ad2.css.map": "/GenomeInfoTech/static/css/main.e6c13ad2.css.map",
-    "main.0e1898b8.js.map": "/GenomeInfoTech/static/js/main.0e1898b8.js.map",
+    "main.f57a9904.css.map": "/GenomeInfoTech/static/css/main.f57a9904.css.map",
+    "main.f0c1a4bd.js.map": "/GenomeInfoTech/static/js/main.f0c1a4bd.js.map",
     "787.ec08529b.chunk.js.map": "/GenomeInfoTech/static/js/787.ec08529b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.0e1898b8.js"
+    "static/css/main.f57a9904.css",
+    "static/js/main.f0c1a4bd.js"
   ]
 }
