@@ -1,22 +1,31 @@
 import { Layout } from "antd";
 import { Typography } from "antd";
-import { Col, Row } from "antd";
+import { Col, Row, Divider } from "antd";
 import { Image } from "antd";
+
 import Earth from "../img/earth.jpg";
 
+import ReadMore from "../components/ReadMore";
 import cofounderOne from "../img/co_founder_img_one.jpeg";
 import cofounderTwo from "../img/co_founder_img_two.jpeg";
+import { useState } from "react";
 const { Content } = Layout;
 const { Title } = Typography;
 const { Paragraph } = Typography;
 
+
+
+
+  
 function Homepage() {
+  
   return (
     <Layout
       style={{
         backgroundImage: "url(" + Earth + ")",
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
+
       }}
     >
       <div>
@@ -49,10 +58,11 @@ function Homepage() {
         <Content
           style={{
             padding: "0em 15em",
-            marginTop: "4em",
+            marginTop: "4em"
+
           }}
         >
-          <hr style={{ margin: "4em", borderTop: "0.2em solid green" }} />
+          <hr style={{ margin: "4em", borderTop: "0.2em solid rgba(31, 102, 16, .3)" }} />
           <Paragraph
             style={{
               fontSize: "1.2em",
@@ -94,18 +104,21 @@ function Homepage() {
             central to the web designing process. Websites have an array of
             elements presented in ways that make them easy to navigate.
           </Paragraph>
-          <hr style={{ margin: "4em", borderTop: "0.2em solid green" }} />
+          <hr style={{ margin: "4em", borderTop: "0.2em solid rgba(31, 102, 16, .3)" }} />
         </Content>
+   
         <div
           style={{
             background: "rgba(31, 102, 16, .3)",
-            padding: "1em 0",
+    
             margin: "10em 0 6em 0",
           }}
         >
           <Title
             style={{
               textAlign: "center",
+
+              lineHeight: "4em",
               color: "white",
             }}
             level={2}
@@ -115,188 +128,186 @@ function Homepage() {
         </div>
         <Content
           style={{
-            padding: "0em 10em",
-            marginBottom: "10em",
+            padding: "0em 8em",
+            marginBottom: "20em",
+
+         
           }}
         >
-          <Row>
-            <Col span={3} />
-            <Col
-              style={{
-                backgroundColor: "white",
 
-                borderRadius: "12px",
-                border: "2px solid 	#D0D0D0",
-              }}
+
+
+<div    style={{
+                backgroundColor: "#FFFFFF",
+
+                marginBottom: "6em",
+       
+            boxShadow: "0px 10px 10px 5px rgba(0, 0, 0, 0.4)",
+            borderRadius: "12px",
+                padding: "2em"
+              }}>
+
+          <Row gutter={16}>
+
+            <Col
+           
               span={8}
             >
               {" "}
               <Image
                 src={cofounderOne}
-                style={{ width: "100%", borderRadius: "12px", margin: "0" }}
-              />{" "}
+                style={{ width: "100%", borderRadius: "50%", margin: "0",  padding: "3em"}}
+                />{" "}
+           
+              </Col>
+              <Col span={15}>
               <Title
                 style={{
                   textAlign: "center",
-                  color: "#606060",
+                    color: "#606060",
+
                 }}
-                level={4}
+                level={3}
               >
                 Nadiia Plaksii
               </Title>
               <div
                 style={{
-                  background: "rgba(31, 102, 16, .3)",
+                    background: "rgba(31, 102, 16, .2)",
+            
+    
 
                 }}
               >
-                <hr
-                  style={{
-                    margin: "2em 0",
-                  }}
-                />
+            
                 <Title
                   style={{
                     textAlign: "center",
-                    color: "white",
+                      color: "white",
+                      lineHeight: "3em",
                   }}
                   level={4}
                 >
                   Co-founder / Project Manager
                 </Title>
-                <hr
-                  style={{
-                    margin: "2em 0",
-                  }}
-                />
+             
               </div>
               <Paragraph
                 style={{
                   fontSize: "1em",
-                  textAlign: "start",
-                  lineHeight: "2em",
-                  padding: "0.1em 0.1em 0.1em 1em",
+                  textAlign: "justify",
+                  lineHeight: "2.5em",
+                  padding: "0 1em",
             
                 }}
-              >
-                Monitor Project Progress and Set Deadlines 
-           
+                >
+                  <ReadMore>
+               Experienced in project management related to the sale or lease of state land to legal entities or individuals for the public, commercial, industrial, and other investment projects with over 16 years as an effective link between project developers, key stakeholders (authorities and state governments), and business partners (investors). Excellent reputation for resolving problems and improving key stakeholders' satisfaction. Great communication skills, listening skills. Team player and can find a common language with people from different backgrounds, authority, age, work, and life experiences. Strong business development professional graduated from The London School of Economics and Political Science (LSE).
+               </ReadMore>
               </Paragraph>
-              <hr />
-              <Paragraph
-                style={{
-                  fontSize: "1em",
-                  textAlign: "start",
-                  lineHeight: "2em",
-                  padding: "0.1em 0.1em 0.1em 1em",
-            
-                }}
-              >
-          
-                Solve Issues That Arise 
-
-              </Paragraph>
-              <hr />
-              <Paragraph
-                style={{
-                  fontSize: "1em",
-                  textAlign: "start",
-                  lineHeight: "2em",
-                  padding: "0.1em 0.1em 0.1em 1em",
-            
-                }}
-              >
              
-                Evaluate Project Performance 
-              </Paragraph>
-            </Col>
-            <Col span={2} />
-            <Col
-              style={{
-                backgroundColor: "white",
+              </Col>
+        
+          </Row>
 
-                borderRadius: "12px",
-                border: "2px solid 	#D0D0D0",
-              }}
+
+          </div>
+
+
+          <div    style={{
+                backgroundColor: "#FFFFFF",
+
+                marginBottom: "5em",
+       
+            boxShadow: "0px 10px 10px 5px rgba(0, 0, 0, 0.4)",
+            borderRadius: "12px",
+                padding: "2em"
+              }}>
+
+          <Row gutter={16}>
+
+            <Col
+           
               span={8}
             >
               {" "}
               <Image
                 src={cofounderTwo}
-                style={{ width: "100%", borderRadius: "12px", margin: "0" }}
-              />{" "}
+                style={{ width: "100%", borderRadius: "50%", margin: "0",  padding: "3em"}}
+                />{" "}
+           
+              </Col>
+              <Col span={15}>
               <Title
                 style={{
                   textAlign: "center",
-                   color: "#606060",
+                    color: "#606060",
+
                 }}
-                level={4}
+                level={3}
               >
-                Vladislav Plaksy
+      Vladislav Plaksy
               </Title>
               <div
                 style={{
-                  background: "rgba(31, 102, 16, .3)",
-               
+                    background: "rgba(31, 102, 16, .2)",
+            
+    
+
                 }}
               >
-                <hr
-                  style={{
-                    margin: "2em 0",
-                  }}
-                />
+            
                 <Title
                   style={{
                     textAlign: "center",
-                    color: "white",
+                      color: "white",
+                      lineHeight: "3em",
                   }}
                   level={4}
                 >
-                  Co-founder / Web Developer
+                                Co-founder / Web Developer
                 </Title>
-                <hr
-                  style={{
-                    margin: "2em 0",
-                  }}
-                />
-              </div>
+             
+                </div>
+        
               <Paragraph
                 style={{
                   fontSize: "1em",
-                  textAlign: "start",
-                  lineHeight: "2em",
-                  padding: "0.1em 0.1em 0.1em 1em",
+                  textAlign: "justify",
+                  lineHeight: "2.5em",
+                  padding: "0 1em",
+            
                 }}
-              >
-                Writing and reviewing code for sites
-              </Paragraph>
-              <hr />
-              <Paragraph
-                style={{
-                  fontSize: "1em",
-                  textAlign: "start",
-                  lineHeight: "2em",
-                  padding: "0.1em 0.1em 0.1em 1em",
-                }}
-              >
-                Testing web applications
-              </Paragraph>
-              <hr />
-              <Paragraph
-                style={{
-                  fontSize: "1em",
-                  textAlign: "start",
-                  lineHeight: "2em",
-                  padding: "0.1em 0.1em 0.1em 1em",
-                }}
-              >
-            Troubleshooting problems with performance or user experience
-              </Paragraph>
-   
-            </Col>
+                >
+                          <ReadMore>
+               With over 29 years of IT management, technology consulting, and development experience, I am a seasoned Delivery Manager at EPAM Systems, a leading global provider of digital platform engineering and software development services.
+
+My mission is to design and build innovative solution components within the EPAM Fast-Data platform, focusing on accelerating the adoption of event streaming as a platform for data-driven enterprises. I leverage my expertise in microservices architecture, Java, Spring Boot, and Kafka APIs to deliver high-quality and scalable solutions that meet the needs and expectations of our clients.
+
+I am also a co-founder and CEO of Genome InfoTech, a startup that provides cutting-edge data analytics and machine learning solutions for the healthcare industry. I lead a team of talented data scientists and engineers who use Scala, Spark, Hadoop, AWS, and GCP to create and deploy data pipelines, models, and applications that help improve health outcomes and reduce costs. 
+
+I have a strong educational background in engineering, ecology, and land cadastre, as well as executive education from IESE Business School and MIT Sloan Executive Education. I hold several professional certifications, including Professional Scrum Master (PSM I, SPS), Google Cloud Certified Professional Data Engineer, Oracle Certified Associate, Java SE 7, and ITIL 4 Foundation. I am passionate about learning new technologies and skills, and I continuously seek opportunities to grow and challenge myself.
+</ReadMore>
+
+           
+                  </Paragraph>
+               
+                
+             
+              </Col>
+        
           </Row>
+
+
+          </div>
+
+
+
         </Content>
-      </div>
+    
+
+        </div>
+
     </Layout>
   );
 }
