@@ -1,12 +1,31 @@
-import { Menu } from "antd";
+import { Menu, Layout, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
-import { Layout } from "antd";
-import { Typography } from "antd";
+import { useMediaQuery } from "react-responsive";
 
 const { Header } = Layout;
 const { Title } = Typography;
 
 function HeaderElement() {
+  const isLaptop = useMediaQuery({ maxWidth: 768 });
+
+  const headerStyle = isLaptop
+    ? {
+      background: "rgba(0, 0, 0, .6)",
+      borderBottom: "2px solid white",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "1em",
+      }
+    : {
+      background: "rgba(0, 0, 0, .6)",
+      borderBottom: "2px solid white",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "5em",
+    };
+  
   const navigate = useNavigate();
   const items = [
     {
@@ -29,19 +48,14 @@ function HeaderElement() {
   return (
     <div>
       <Header
-        style={{
-          background: "rgba(0, 0, 0, .6)",
-          borderBottom: "2px solid white",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "5em",
-
-        }}
+        style={headerStyle}
       >
-        <Title style={{ color: "white" }} level={2}>
+            { isLaptop ?    <Title style={{ color: "white" }} level={4}>
           Genome InfoTech
-        </Title>
+        </Title> :    <Title style={{ color: "white" }} level={2}>
+          Genome InfoTech
+        </Title>}
+      
         <Menu
           mode="horizontal"
           items={items}

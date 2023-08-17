@@ -1,34 +1,44 @@
+import "../css/Homepage.css";
 import { Layout } from "antd";
 import { Typography } from "antd";
+import { useMediaQuery } from "react-responsive";
+
 const { Content } = Layout;
 const { Title } = Typography;
 
 function HomeSlogan() {
+  const isLaptop = useMediaQuery({ maxWidth: 768 });
+
+  const contentStyle = {
+    background: "rgba(225, 225, 225, .1)",
+    height: "48vw",
+    display: "flex",
+    alignItems: "flex-end"
+  };
+  const titleStyle = {
+    color: "white",
+    lineHeight: "2em" 
+  }
   return (
     <div>
       <Content
-        style={{
-          background: "rgba(225, 225, 225, .1)",
-          height: "48vw",
-          display: "flex",
-          alignItems: "flex-end",
-        }}
+        style={contentStyle}
       >
         <div
-          style={{
-            marginLeft: "50vw",
-            marginBottom: "9vw",
-            padding: "3em",
-            background: "rgba(0, 0, 0, .6)",
-          }}
+        className="slogan-box"
         >
-          <Title style={{ color: "white", lineHeight: "2em" }} level={2}>
+              { isLaptop ? <Title style={titleStyle} level={4}>
             With a view to the future!
-          </Title>
-
-          <Title style={{ color: "white", lineHeight: "2em" }} level={4}>
+          </Title> :  <Title style={titleStyle} level={2}>
+            With a view to the future!
+          </Title>}
+      
+          { isLaptop ? <Title style={titleStyle} level={5}>
             Web design, web publishing, web programming, and database management
-          </Title>
+          </Title> : <Title style={titleStyle} level={4}>
+            Web design, web publishing, web programming, and database management
+          </Title>}
+          
         </div>
       </Content>
     </div>
