@@ -1,0 +1,20 @@
+.img {
+  border-radius: "50%";
+  width: "50%";
+  color: brown;
+}
+.co-founder-title {
+  background: rgba(31, 102, 16, 0.3);
+
+  text-align: center;
+  padding: 1em;
+}
+.content-cofounders {
+  margin-bottom: 8em;
+}
+.link {
+  color:rgba(31, 102, 16, 0.8);
+}
+.link:hover {
+  color:rgba(31, 102, 16, 0.3);
+}

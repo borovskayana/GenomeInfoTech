@@ -1,4 +1,5 @@
-import { Menu, Layout, Typography } from "antd";
+import "../css/HeaderStyle.css";
+import { Menu, Layout, Typography, ConfigProvider } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
@@ -7,25 +8,8 @@ const { Title } = Typography;
 
 function HeaderElement() {
   const isLaptop = useMediaQuery({ maxWidth: 768 });
+  const title = "Genome InfoTech";
 
-  const headerStyle = isLaptop
-    ? {
-      background: "rgba(0, 0, 0, .6)",
-      borderBottom: "2px solid white",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      padding: "1em",
-      }
-    : {
-      background: "rgba(0, 0, 0, .6)",
-      borderBottom: "2px solid white",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      padding: "5em",
-    };
-  
   const navigate = useNavigate();
   const items = [
     {
@@ -46,29 +30,27 @@ function HeaderElement() {
     },
   ];
   return (
-    <div>
-      <Header
-        style={headerStyle}
-      >
-            { isLaptop ?    <Title style={{ color: "white" }} level={4}>
-          Genome InfoTech
-        </Title> :    <Title style={{ color: "white" }} level={2}>
-          Genome InfoTech
-        </Title>}
-      
-        <Menu
-          mode="horizontal"
-          items={items}
-          onClick={({ key }) => navigate(key)}
-          style={{
-            width: "50vw",
-            background: "rgba(0, 0, 0, .0)",
-            color: "white",
-            alignItems: "end",
-          }}
-        />
-      </Header>
-    </div>
+    <ConfigProvider theme={{ token: { colorText: "#ffffff" } }}>
+      <div>
+        <Header className="header-style">
+          {isLaptop ? (
+            <Title level={4}>{title}</Title>
+          ) : (
+            <Title level={2}>{title}</Title>
+          )}
+
+          <Menu
+            mode="horizontal"
+            items={items}
+            onClick={({ key }) => navigate(key)}
+            style={{
+              width: "50vw",
+              background: "rgba(0, 0, 0, .0)",
+            }}
+          />
+        </Header>
+      </div>
+    </ConfigProvider>
   );
 }
 

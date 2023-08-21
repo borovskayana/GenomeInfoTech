@@ -1,11 +1,10 @@
-import { Layout } from "antd";
+import { Layout, Space } from "antd";
 
-import "../css/Homepage.css";
 import Earth from "../img/earth.jpg";
 
-import HomeSlogan from "../components/HomeSlogan";
-import HomeInfoAbout from "../components/HomeInfoAbout";
-import HomeCoFounders from "../components/HomeCoFounders";
+import HomeSlogan from "../components/home-components/HomeSlogan";
+import HomeInfoAbout from "../components/home-components/HomeInfoAbout";
+import CofoundersData from "../components/home-components/CofoundersData";
 
 function Homepage() {
   return (
@@ -17,9 +16,11 @@ function Homepage() {
       }}
     >
       <div>
-        <HomeSlogan />
-        <HomeInfoAbout />
-        <HomeCoFounders />
+        <Space direction="vertical" size="large">
+          <HomeSlogan />
+          <HomeInfoAbout />
+          <CofoundersData />
+        </Space>
       </div>
     </Layout>
   );

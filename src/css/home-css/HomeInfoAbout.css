@@ -1,0 +1,21 @@
+.content-style {
+  padding: 0em 15em;
+}
+.paragraph-style {
+  font-size: 1.1em;
+  text-align: justify;
+  line-height: 2.6em;
+}
+hr {
+  border-top: 2px solid rgba(31, 102, 16, 0.3);
+}
+@media (max-width: 768px) {
+  .content-style {
+    padding: 0em 5em;
+  }
+  .paragraph-style {
+    font-size: 0.9em;
+
+    line-height: 2em;
+  }
+}
