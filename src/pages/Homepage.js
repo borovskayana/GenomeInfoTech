@@ -16,8 +16,9 @@ function Homepage() {
       }}
     >
       <div>
+
+        <HomeSlogan />
         <Space direction="vertical" size="large">
-          <HomeSlogan />
           <HomeInfoAbout />
           <CofoundersData />
         </Space>

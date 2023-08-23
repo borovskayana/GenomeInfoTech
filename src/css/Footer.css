@@ -1,0 +1,13 @@
+
+
+.styles-footer {
+
+    align-items: center;
+    text-align: start;
+}
+@media (max-width: 768px) {
+    .styles-footer {
+        text-align: center;
+    }
+  }
+

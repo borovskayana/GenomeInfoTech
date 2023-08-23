@@ -4,17 +4,21 @@
   color: brown;
 }
 .co-founder-title {
-  background: rgba(31, 102, 16, 0.3);
-
+  background-color: rgba(31, 102, 16, 0.3);
   text-align: center;
-  padding: 1em;
+  padding: 0.9em;
 }
 .content-cofounders {
   margin-bottom: 8em;
 }
 .link {
-  color:rgba(31, 102, 16, 0.8);
+  color: white;
 }
 .link:hover {
-  color:rgba(31, 102, 16, 0.3);
+  color: lightblue;
+}
+
+.cofounders-text {
+  text-align: center;
+
 }

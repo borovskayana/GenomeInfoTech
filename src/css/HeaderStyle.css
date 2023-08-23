@@ -9,12 +9,7 @@
 .title-style {
   color: #ffffff;
 }
-.menu-style {
-  width: "50vw";
-  background: "rgba(0, 0, 0, .0)";
 
-  align-items: "end";
-}
 @media (max-width: 768px) {
   .header-style {
     padding: 1em;

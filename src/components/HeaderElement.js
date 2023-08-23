@@ -1,5 +1,6 @@
 import "../css/HeaderStyle.css";
-import { Menu, Layout, Typography, ConfigProvider } from "antd";
+import items from "../data/Items";
+import { Menu, Layout, Typography, ConfigProvider, Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
@@ -11,26 +12,9 @@ function HeaderElement() {
   const title = "Genome InfoTech";
 
   const navigate = useNavigate();
-  const items = [
-    {
-      label: "ABOUT US",
-      key: "/",
-    },
-    {
-      label: "PROJECTS",
-      key: "/projects",
-    },
-    {
-      label: "NEWS",
-      key: "/news",
-    },
-    {
-      label: "CONTACT US",
-      key: "/contact",
-    },
-  ];
+
   return (
-    <ConfigProvider theme={{ token: { colorText: "#ffffff" } }}>
+    <ConfigProvider theme={{ token: { colorText: "#ffffff", colorPrimary: "#00b96b" } }}>
       <div>
         <Header className="header-style">
           {isLaptop ? (
@@ -44,10 +28,13 @@ function HeaderElement() {
             items={items}
             onClick={({ key }) => navigate(key)}
             style={{
-              width: "50vw",
+              width: "35vw",
               background: "rgba(0, 0, 0, .0)",
+              marginLeft: "20%"
+     
             }}
           />
+          <Button type="primary">Sign in</Button>
         </Header>
       </div>
     </ConfigProvider>

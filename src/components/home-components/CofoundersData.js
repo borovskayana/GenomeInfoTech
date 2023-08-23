@@ -1,7 +1,9 @@
 import "../../css/home-css/CoFounders.css";
+
 import cofoundersInfo from "../../data/CofoundersInfo";
 import HomeCoFounders from "./HomeCoFounders";
 import CofoundersTitle from "./CoFoundersTitle";
+
 import { Row, Space } from "antd";
 
 
@@ -18,9 +20,9 @@ function CofoundersData() {
 
   return (
     <div className="content-cofounders">
-      <Space direction="vertical" size="large">
+      <Space direction="vertical" size={48}>
         <CofoundersTitle />
-        <Row justify="center" gutter={64}>
+        <Row justify="center">
           {listItems}
         </Row>
       </Space>
