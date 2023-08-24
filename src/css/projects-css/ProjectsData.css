@@ -1,11 +1,24 @@
 .projects-content {
-    padding: 10em;
+  padding: 10em;
 }
 .projects-titles {
-    align-self: center;
+  align-self: center;
 }
+.projects-img {
+  position: fixed;
+  right: 0.5em;
+  top: 0.5em;
+  border-radius: 50%;
+  height: 3em;
+  width: 3em;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.projects-img:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 @media (max-width: 768px) {
-    .projects-content {
-        padding: 0em;
-    }
+  .projects-content {
+    padding: 0em;
   }
+}
