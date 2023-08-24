@@ -17,14 +17,14 @@ function FirstProjectData() {
 
   return (
     <div>
-      <Space direction="vertical" size="large">
+
         <div> {mainProjects} </div>
         <div className="first-project">
           <Divider plain>
             <Title level={3}>Projects</Title>
           </Divider>
         </div>
-      </Space>
+
     </div>
   );
 }
