@@ -1,26 +1,24 @@
-import { Image, Typography, Layout } from "antd";
-import projects from "../img/projects.png"
+import { Typography, Layout, ConfigProvider } from "antd";
 import ProjectsData from "../components/projects-components/ProjectsData";
-
-const { Title, Text } = Typography;
-const { Content } = Layout;
+import FirstProjectData from "../components/projects-components/FirstProjectData";
 
 function Projects() {
-    return (
-        <>
-            <Content style={{textAlign: "center"}}>
-            <Title level={2}>Name of the project</Title>
-            <Text>Brief info about project</Text>
-            <Image src={projects} style={{ width: "50%" }} />
-            </Content>
-            <div style={{textAlign: "center"}}>
-                <Title level={3}>Projects</Title>
-                <hr/>
-            </div>
-            <ProjectsData/>
-
-        </>
-    )
+  return (
+    <>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorText: "rgba(0, 0, 0, .7)",
+            colorPrimary: "#00b96b",
+            colorSplit: "#00b96b",
+          },
+        }}
+      >
+        <FirstProjectData />
+        <ProjectsData />
+      </ConfigProvider>
+    </>
+  );
 }
 
-export default Projects
+export default Projects;
