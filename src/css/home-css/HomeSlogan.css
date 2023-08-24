@@ -1,5 +1,4 @@
 .content-slogan {
-
   height: 49.8vw;
   display: flex;
   align-items: flex-end;
@@ -9,26 +8,21 @@
   margin-left: 50vw;
   margin-bottom: 9vw;
   padding: 3em;
-  background: rgba(0, 0, 0, .6);
+  background: rgba(0, 0, 0, 0.6);
 }
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
   .slogan-box {
-
     margin-left: 40vw;
     margin-bottom: 0vw;
     padding: 0 1em;
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, 0.4);
   }
 }
-@media  (max-width: 500px) {
+@media (max-width: 500px) {
   .slogan-box {
-
     margin-left: 0vw;
     margin-bottom: -3em;
     padding: 0 1em;
- 
-
-
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, 0.4);
   }
 }

@@ -1,4 +1,5 @@
-import "../../css/home-css/CoFounders.css";
+
+import "../../css/projects-css/ProjectsData.css"
 import { Col, Row, Image, Typography, ConfigProvider } from "antd";
 
 const { Title, Text } = Typography;
@@ -10,7 +11,7 @@ function ProjectsHome({ img, name, stage }) {
         <Row justify="center">
           <Col span={8}>
             {" "}
-            <div style={{ alignSelf: "center" }}>
+            <div className="progects-titles">
               <Title level={5}>{name} </Title>
               <Text>{stage} </Text>
             </div>

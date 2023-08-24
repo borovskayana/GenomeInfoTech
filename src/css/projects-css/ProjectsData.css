@@ -1,0 +1,11 @@
+.projects-content {
+    padding: 10em;
+}
+.projects-titles {
+    align-self: center;
+}
+@media (max-width: 768px) {
+    .projects-content {
+        padding: 0em;
+    }
+  }

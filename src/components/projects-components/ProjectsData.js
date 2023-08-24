@@ -1,3 +1,4 @@
+import "../../css/projects-css/ProjectsData.css"
 import projectsInfo from "../../data/ProjectsInfo";
 import ProjectsHome from "./ProjectsHome";
 
@@ -11,6 +12,6 @@ function ProjectsData() {
     />
   ));
 
-  return <div style={{ padding: "10em" }}>{listProjects} </div>;
+  return <div className="projects-content">{listProjects} </div>;
 }
 export default ProjectsData;
