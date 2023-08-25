@@ -48,11 +48,15 @@ function ModalWindow( {img, name, info} ) {
         />
 
         <Row justify="center">
-          <Col span={10}>
+          <Col   lg={{ span: 10 }}
+              md={{ span: 10 }}
+              xs={{ span: 24 }}>
             {" "}
             <Image src={img} />
           </Col>
-          <Col span={10}>
+          <Col   lg={{ span: 10 }}
+              md={{ span: 10 }}
+              xs={{ span: 24 }}>
             {" "}
             <div className="progects-titles">
               <Title level={4}>{name} </Title>

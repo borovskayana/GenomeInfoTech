@@ -1,8 +1,9 @@
 import "../../css/projects-css/ProjectsData.css";
 import mainProjectInfo from "../../data/MainProject";
 import FirstProject from "./FirstProject";
-import { Typography, Divider, Space } from "antd";
+import { Typography, Divider} from "antd";
 const { Title } = Typography;
+
 
 function FirstProjectData() {
   const mainProjects = mainProjectInfo.map((lists, index) => (
@@ -18,7 +19,7 @@ function FirstProjectData() {
   return (
     <div>
 
-        <div> {mainProjects} </div>
+          <div> {mainProjects} </div>
         <div className="first-project">
           <Divider plain>
             <Title level={3}>Projects</Title>
