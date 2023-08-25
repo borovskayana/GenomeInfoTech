@@ -14,7 +14,7 @@ function HeaderElement() {
   const navigate = useNavigate();
 
   return (
-    <ConfigProvider theme={{ token: { colorText: "#ffffff", colorPrimary: "#00b96b" } }}>
+    <ConfigProvider theme={{ token: { colorText: "#ffffff", colorPrimary: "#00b96b", colorBgElevated: "rgba(0, 0, 0, .6)" } }}>
       <div>
         <Header className="header-style">
           {isLaptop ? (
