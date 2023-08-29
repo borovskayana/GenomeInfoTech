@@ -26,9 +26,10 @@ function ProjectsData() {
     }
   });
 
-  const listProjects = filteredData.map((lists, index) => (
+  const listProjects = filteredData.map((lists) => (
     <ProjectsHome
-      key={index}
+    key={lists.id}
+      id={lists.id}
       img={lists.img}
       name={lists.name}
       stage={lists.stage}
@@ -45,7 +46,8 @@ function ProjectsData() {
           style={inputStyle}
         />
       </div>
-      <div className="projects-content">{listProjects}</div>;
+      <div className="projects-content">{listProjects}</div>
+      
     </>
   );
 }
