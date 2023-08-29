@@ -1,12 +1,14 @@
 import "../../css/projects-css/ProjectsData.css";
-import mainProjectInfo from "../../data/MainProject";
+import projectsInfo from "../../data/ProjectsInfo";
 import FirstProject from "./FirstProject";
-import { Typography, Divider} from "antd";
+import { Typography, Divider, ConfigProvider } from "antd";
+import { Carousel } from 'antd';
 const { Title } = Typography;
 
 
 function FirstProjectData() {
-  const mainProjects = mainProjectInfo.map((lists, index) => (
+  const sliceProjects = projectsInfo.slice(0, 3);
+  const mainProjects = sliceProjects.map((lists, index) => (
     <FirstProject
       key={index}
       img={lists.img}
@@ -17,16 +19,18 @@ function FirstProjectData() {
   ));
 
   return (
+    <ConfigProvider theme={{ token: { colorBgContainer: "rgba(0, 0, 0, .6)" } }}>
     <div>
 
-          <div> {mainProjects} </div>
+        <Carousel autoplay style={{ paddingBottom: '5em'}}> {mainProjects} </Carousel>
         <div className="first-project">
           <Divider plain>
             <Title level={3}>Projects</Title>
           </Divider>
         </div>
 
-    </div>
+      </div>
+      </ConfigProvider>
   );
 }
 export default FirstProjectData;

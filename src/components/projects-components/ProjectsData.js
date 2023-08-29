@@ -28,7 +28,7 @@ function ProjectsData() {
 
   const listProjects = filteredData.map((lists) => (
     <ProjectsHome
-    key={lists.id}
+      key={lists.id}
       id={lists.id}
       img={lists.img}
       name={lists.name}
@@ -47,7 +47,6 @@ function ProjectsData() {
         />
       </div>
       <div className="projects-content">{listProjects}</div>
-      
     </>
   );
 }

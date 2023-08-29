@@ -1,9 +1,9 @@
 .projects-content {
-  padding: 0 10em;
+  padding: 0 6em;
   margin-bottom: 8em;
 }
-.projects-titles {
-  align-self: center;
+.row-content {
+  padding: 2em 0;
 }
 .projects-img {
   position: fixed;
@@ -21,7 +21,7 @@
   text-align: center;
 }
 .first-modal {
-  text-align: end; 
+  text-align: end;
   padding-right: 30vw;
 }
 @media (max-width: 768px) {
