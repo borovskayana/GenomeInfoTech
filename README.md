@@ -68,3 +68,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<br>
+<br>
+<br>
+
+## Genome Info Tech project contains components from React UI library "Ant Design" :
+
+
+| Ant Design component              | Genome Info Tech component usage  |
+| --------------------------------  | --------------------------------  |
+| Layout                            | Layout, Header, Footer, main content |
+| Menu                              | Header, Footer |
+| Typography                        | Home, Projects, Contact, News pages |
+| Button                            | Header, Contact Form, Modal window |
+| Button                            | Header, Contact Form, Modal window |
+| Row, Col                          | Home, Projects, Contact pages |
+| Space                             | Home, Projects, Contact pages |
+| Image                             | Home, Projects pages |
+| Divider                           | Projects page |
+| Input                             | Contact Form |
+| Select                            | Contact Form |
+| Carousel                          | Projects page |
