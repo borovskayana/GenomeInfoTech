@@ -82,7 +82,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 | Menu                              | Header, Footer |
 | Typography                        | Home, Projects, Contact, News pages |
 | Button                            | Header, Contact Form, Modal window |
-| Button                            | Header, Contact Form, Modal window |
 | Row, Col                          | Home, Projects, Contact pages |
 | Space                             | Home, Projects, Contact pages |
 | Image                             | Home, Projects pages |
