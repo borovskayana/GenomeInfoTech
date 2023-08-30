@@ -7,11 +7,7 @@ const { Title, Text } = Typography;
 function ProjectsHome({ img, name, stage, info, id }) {
   const a = Number(`${id}`);
   let stages;
-  {
-    a % 2 === 0
-      ? (stages = { float: "left", textAlign: "start" })
-      : (stages = { float: "right", textAlign: "end" });
-  }
+  a % 2 === 0 ? (stages = { float: "left", textAlign: "start" }) : (stages = { float: "right", textAlign: "end" }) 
 
   return (
     <>
