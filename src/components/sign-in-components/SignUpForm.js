@@ -40,10 +40,16 @@ const tailFormItemLayout = {
     },
   },
 };
-const SignInForm = () => {
+const SignUpForm = () => {
   const [form] = Form.useForm();
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
+    localStorage.setItem("nickname", values.nickname);
+    localStorage.setItem("email", values.email);
+    localStorage.setItem("password", values.password);
+
+    alert("Account created successfully!!")
+    window.location.reload()
   };
 
   return (
@@ -191,4 +197,4 @@ const SignInForm = () => {
     </ConfigProvider>
   );
 };
-export default SignInForm;
+export default SignUpForm;

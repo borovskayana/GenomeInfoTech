@@ -1,10 +1,13 @@
 import "../../css/sign-in/SignUp.css";
 import React, { useState } from "react";
-import { Button, Modal, ConfigProvider, Typography, theme, Space } from "antd";
+import { Button, ConfigProvider, Typography, theme } from "antd";
+import {  useLocation, Link } from "react-router-dom";
 
-import SignInForm from "./SignUpForm";
+import SignUpModal from "./SignUpModal";
 const { Title } = Typography;
-const SignIn = () => {
+const SignUp = () => {
+  const location = useLocation();
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -20,31 +23,22 @@ const SignIn = () => {
       <ConfigProvider
         theme={{
           algorithm: theme.darkAlgorithm,
-          token: { colorBgElevated: "rgba(0, 0, 0, .8)" } 
-
+          token: { colorBgElevated: "rgba(0, 0, 0, .6)" },
         }}
       >
-        <Button type="primary" onClick={showModal}>
-          Sign Up
-        </Button>
+        <Link to="/modal/sign-up" state={{ previousLocation: location }}>
+          <Button type="primary" onClick={showModal}>
+            Sign Up
+          </Button>
+        </Link>
 
-        <Modal
-          title=""
-          open={isModalOpen}
-          onOk={handleOk}
-          onCancel={handleCancel}
-          footer={null}
-        >
-          <Space direction="vertical" size="large" className="space-sign">
-            <Title level={2} className="title-sign">
-              Sign Up
-            </Title>
-
-            <SignInForm />
-          </Space>
-        </Modal>
+        <SignUpModal
+          handleOk={handleOk}
+          handleCancel={handleCancel}
+          isModalOpen={isModalOpen}
+        />
       </ConfigProvider>
     </>
   );
 };
-export default SignIn;
+export default SignUp;
