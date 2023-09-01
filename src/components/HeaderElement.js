@@ -1,5 +1,6 @@
 import "../css/HeaderStyle.css";
 import items from "../data/Items";
+import SignUp from "./sign-in-components/SignUp";
 import { Menu, Layout, Typography, ConfigProvider, Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
@@ -14,7 +15,15 @@ function HeaderElement() {
   const navigate = useNavigate();
 
   return (
-    <ConfigProvider theme={{ token: { colorText: "#ffffff", colorPrimary: "#00b96b", colorBgElevated: "rgba(0, 0, 0, .6)" } }}>
+    <ConfigProvider
+      theme={{
+        token: {
+          colorText: "#ffffff",
+          colorPrimary: "#00b96b",
+          colorBgElevated: "rgba(0, 0, 0, .6)",
+        },
+      }}
+    >
       <div>
         <Header className="header-style">
           {isLaptop ? (
@@ -30,11 +39,10 @@ function HeaderElement() {
             style={{
               width: "35vw",
               background: "rgba(0, 0, 0, .0)",
-              marginLeft: "20%"
-     
+              marginLeft: "20%",
             }}
           />
-          <Button type="primary">Sign in</Button>
+          <SignUp />
         </Header>
       </div>
     </ConfigProvider>
