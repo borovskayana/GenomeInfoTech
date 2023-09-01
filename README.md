@@ -89,3 +89,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 | Input                             | Contact Form |
 | Select                            | Contact Form |
 | Carousel                          | Projects page |
+| Modal                             | Sign Up, Sign In components |
+| Form                              | Contact Form, Sign Up, Sign In components |
+| Checkbox                          | Sign Up component |
+
