@@ -4,6 +4,7 @@ import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
 import News from "../pages/News";
 import SignUpModal from "./sign-in-components/SignUpModal";
+import SignInModal from "./sign-in-components/SignInModal";
 
 
 function Directions() {
@@ -20,7 +21,8 @@ function Directions() {
       </Routes>
       {previousLocation && (
         <Routes>
-          <Route path="/modal/:id" element={<SignUpModal />} />
+          <Route path="/modal/sign-up" element={<SignUpModal />} />
+          <Route path="/modal/sign-in" element={<SignInModal />} />
         </Routes>
       )}
     </div>

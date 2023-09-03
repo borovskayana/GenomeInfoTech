@@ -1,5 +1,11 @@
 .content {
-    padding: 6em 15em;
+    padding: 2.6em 15em;
+
+
+  }
+  .content-second {
+    padding: 4em 0em;
+
   }
   @media (max-width: 900px) {
     .content {

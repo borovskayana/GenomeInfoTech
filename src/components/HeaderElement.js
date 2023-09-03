@@ -1,6 +1,7 @@
 import "../css/HeaderStyle.css";
 import items from "../data/Items";
 import SignUp from "./sign-in-components/SignUp";
+import SignIn from "./sign-in-components/SignIn";
 import { Menu, Layout, Typography, ConfigProvider, Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
@@ -42,7 +43,9 @@ function HeaderElement() {
               marginLeft: "20%",
             }}
           />
+          <SignIn />
           <SignUp />
+
         </Header>
       </div>
     </ConfigProvider>

@@ -1,7 +1,7 @@
 function News() {
     return (
         <div>
-            <h1>News on this page.</h1>
+            <h1>Page under construction</h1>
         </div>
     );
 };

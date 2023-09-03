@@ -1,15 +1,17 @@
 import "../../css/home-css/CoFounders.css";
 
-import { Typography, ConfigProvider } from "antd";
+import { Typography, ConfigProvider, Divider } from "antd";
 const { Title } = Typography;
 
 function CofoundersTitle() {
   return (
-    <ConfigProvider theme={{ token: { colorText: "#ffffff" } }}>
-      <div>
-        <Title className="co-founder-title" level={2}>
+    <ConfigProvider theme={{ token: { colorText: "#ffffff", colorSplit: "#ffffff"  } }}>
+      <div >
+        <Divider className="co-founder-title" plain>
+        <Title  level={3}>
           Co-founders
-        </Title>
+          </Title>
+          </Divider>
       </div>
     </ConfigProvider>
   );
