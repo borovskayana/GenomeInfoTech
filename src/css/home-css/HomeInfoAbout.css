@@ -6,9 +6,7 @@
   text-align: justify;
   line-height: 2.6em;
 }
-hr {
-  border-top: 2px solid rgba(31, 102, 16, 0.3);
-}
+
 @media (max-width: 768px) {
   .content-style {
     padding: 0em 5em;

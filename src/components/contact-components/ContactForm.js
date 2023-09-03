@@ -26,12 +26,13 @@ const { Title, Paragraph } = Typography;
 
 const formItemLayout = {
   labelCol: {
-    span: 6,
+   span: 6,
   },
 };
 const tailFormItemLayout = {
   wrapperCol: {
-    offset: 6,
+    xs: { offset: 0 },
+    sm: { offset: 6 },
   },
 };
 
@@ -137,6 +138,9 @@ const ContactForm = () => {
             <Divider plain>
               <Title level={3}>Contact Us</Title>
             </Divider>
+            <Paragraph align="center">
+              Please use the form below to get feedback from Genome InfoTech
+            </Paragraph>
           </ConfigProvider>
           <Content className="content">
             <Form
@@ -173,12 +177,6 @@ const ContactForm = () => {
               >
                 <Input placeholder="example@gmail.com" />
               </Form.Item>
-              <Form.Item name="phone" label="Phone Number">
-                <Input addonBefore={prefixSelector} />
-              </Form.Item>
-              <Form.Item name="company-name" label="Company Name" hasFeedback>
-                <Input />
-              </Form.Item>
               <Form.Item
                 name="subject"
                 label="Subject"
@@ -191,6 +189,13 @@ const ContactForm = () => {
               >
                 <Input />
               </Form.Item>
+              <Form.Item name="phone" label="Phone Number">
+                <Input addonBefore={prefixSelector} />
+              </Form.Item>
+              <Form.Item name="company-name" label="Company Name" hasFeedback>
+                <Input />
+              </Form.Item>
+
               <Form.Item name="tell" label="Tell Us More" hasFeedback>
                 <TextArea rows={4} />
               </Form.Item>
@@ -207,14 +212,13 @@ const ContactForm = () => {
                   </div>
                 </Upload>
               </Form.Item>
-              <Row>
-                <Col offset={6}>
-                  <Form.Item
+         
+              <Form.Item
+                     {...tailFormItemLayout}
                     style={{ textAlign: "justify" }}
                     extra="Information you submit here will be used as detailed in our privacy policy so we can get back to you. From time to time, we would like to contact you about news, insights and exclusive event invitations by email. If you would like to opt-in to receive these marketing emails please tick the relevant boxes below. You will be able to opt-out at any time using the links provided in our emails or by contacting us as detailed in our privacy policy."
                   ></Form.Item>
-                </Col>
-              </Row>
+              
               <Form.Item
                 name="agreement"
                 valuePropName="checked"

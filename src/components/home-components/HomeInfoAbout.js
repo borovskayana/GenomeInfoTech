@@ -1,5 +1,5 @@
 import "../../css/home-css/HomeInfoAbout.css";
-import { Layout, Typography, Space } from "antd";
+import { Layout, Typography, Space, Divider, ConfigProvider } from "antd";
 
 const { Content } = Layout;
 const { Paragraph } = Typography;
@@ -7,9 +7,14 @@ const { Paragraph } = Typography;
 function HomeInfoAbout() {
   return (
     <div>
+        <ConfigProvider
+            theme={{
+              token: { colorText: "rgba(0, 0, 0, .7)", colorSplit: "#00b96b" },
+            }}
+          >
       <Content className="content-style">
         <Space direction="vertical" size="large">
-          <hr />
+          <Divider />
           <div>
             <Paragraph className="paragraph-style">
               Genome InfoTech a startup that provides cutting-edge data
@@ -38,9 +43,10 @@ function HomeInfoAbout() {
               elements presented in ways that make them easy to navigate.
             </Paragraph>
           </div>
-          <hr />
+          <Divider/>
         </Space>
-      </Content>
+        </Content>
+      </ConfigProvider>
     </div>
   );
 }

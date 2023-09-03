@@ -6,7 +6,7 @@ const { Title } = Typography;
 function CofoundersTitle() {
   return (
     <ConfigProvider theme={{ token: { colorText: "#ffffff", colorSplit: "#ffffff"  } }}>
-      <div >
+      <div>
         <Divider className="co-founder-title" plain>
         <Title  level={3}>
           Co-founders
