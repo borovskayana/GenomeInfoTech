@@ -1,14 +1,14 @@
 import "../../css/sign-in/SignUp.css";
 import React, { useState } from "react";
 import { Button, ConfigProvider, Typography, theme } from "antd";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useSearchParams } from "react-router-dom";
 
 import SignUpModal from "./SignUpModal";
-import SignInModal from "./SignInModal";
-const { Title } = Typography;
+
+
 const SignUp = () => {
   const location = useLocation();
-  const history = location.pathname;
+
 
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,18 +21,20 @@ const SignUp = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+  const [searchParams] = useSearchParams();
+  const isLogin = searchParams.get("mode") === "login";
   return (
     <>
       <ConfigProvider
         theme={{
           algorithm: theme.darkAlgorithm,
-          token: { colorBgElevated: "rgba(0, 0, 0, .7)" },
+          token: { colorBgElevated: "rgba(0, 0, 0, .8)" },
         }}
       >
         
         <Link
-            to="/modal/sign-up"
-            state={{ previousLocation: location }}
+       to={`?mode=${isLogin ? "signup" : "login"}`}
+       state={{ previousLocation: location }}
             onClick={showModal}
         >
                 <Button type="primary"> Sign Up</Button>
@@ -43,6 +45,7 @@ const SignUp = () => {
           handleOk={handleOk}
           handleCancel={handleCancel}
           isModalOpen={isModalOpen}
+          isLogin={isLogin}
 
         />
       </ConfigProvider>

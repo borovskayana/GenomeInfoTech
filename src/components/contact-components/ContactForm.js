@@ -233,7 +233,7 @@ const ContactForm = () => {
                 {...tailFormItemLayout}
               >
                 <Checkbox>
-                  I have read the <a href="#">agreement</a>
+                  I have read the <a href="#">agreement</a> <span style={{color:"red"}}>*</span>
                 </Checkbox>
               </Form.Item>
               <Form.Item

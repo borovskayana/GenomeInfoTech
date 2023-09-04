@@ -1,7 +1,29 @@
 .title-sign {
-    text-align: center;
+  text-align: center;
 }
 
 .space-sign {
-    display: flex;
+  display: flex;
 }
+
+.span-1 {
+  color: #ffffff;
+  padding: 0.5em;
+}
+.span-2 {
+  color: #00b96b;
+  padding: 0.5em;
+  font-weight: 800;
+  font-size: 1.1em;
+}
+.span-2:hover {
+    color: #05995b;
+}
+.div-1 {
+  text-align: right;
+  margin-top: 0.5em;
+}
+.div-2 {
+    text-align: left;
+    margin-top: 0.5em;
+  }
