@@ -27,10 +27,10 @@ function PersonalCabinet() {
   return (
     <>
       <Content className="content-cabinet">
-        <div>
+        <div style={{ textAlign: "right"}}>
           <SettingOutlined
             onClick={showDrawer}
-            style={{ fontSize: "32px", textAlign: "right" }}
+            style={{ fontSize: "2em"}}
           />
         </div>
         <Row justify="center">
