@@ -1,5 +1,6 @@
 import "../../css/sign-in/SignUp.css";
-import { Link } from "react-router-dom";
+import Result from "./ResultSuccess";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
   Button,
@@ -47,23 +48,43 @@ const tailFormItemLayout = {
   },
 };
 const SignUpForm = ({ isLogin }) => {
+  const navigate = useNavigate();
+
+
+  const localSignUp = localStorage.getItem("nickname");
+  const localEmail = localStorage.getItem("email");
+  const localPassword = localStorage.getItem("password");
+
   const [form] = Form.useForm();
-  const onFinish = (values) => {
+  function onFinish (values) {
     console.log("Received values of form: ", values);
     localStorage.setItem("nickname", values.nickname);
     localStorage.setItem("email", values.email);
     localStorage.setItem("password", values.password);
+    localStorage.setItem("signUp", values.email);
 
-    alert("Account created successfully!!");
-    window.location.reload();
+  
+    navigate("/welcome");
+
+
   };
+ 
   const signIn = (values) => {
-    console.log("Received values of form: ", values);
-  };
+    console.log(values.username);
+    if(values.username==localEmail&&values.password==localPassword){
+      localStorage.setItem("signUp", values.username);
+      navigate("/")
+
+    }else{
+        alert("Please Enter valid Credential")
+    }
+   }
+ 
 
   return (
     <>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
+
         {isLogin ? (
           <ConfigProvider
             theme={{
@@ -288,6 +309,7 @@ const SignUpForm = ({ isLogin }) => {
             </Space>
           </ConfigProvider>
         )}
+                
         <Link to={`?mode=${isLogin ? "signup" : "login"}`}>
           {isLogin ? (
             <div className="div-1">
@@ -301,6 +323,7 @@ const SignUpForm = ({ isLogin }) => {
             </div>
           )}
         </Link>
+      
       </div>
     </>
   );

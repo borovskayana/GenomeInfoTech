@@ -1,6 +1,7 @@
 import "../css/HeaderStyle.css";
 import items from "../data/Items";
 import SignUp from "./sign-in-components/SignUp";
+import LogOut from "./sign-in-components/LogOut";
 
 import { Menu, Layout, Typography, ConfigProvider, Button } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +11,8 @@ const { Header } = Layout;
 const { Title } = Typography;
 
 function HeaderElement() {
+  const localEmail = localStorage.getItem("signUp");
+  const localPassword = localStorage.getItem("password");
   const isLaptop = useMediaQuery({ maxWidth: 768 });
   const title = "Genome InfoTech";
 
@@ -43,9 +46,7 @@ function HeaderElement() {
               marginLeft: "20%",
             }}
           />
-
-          <SignUp />
-
+          {localEmail ? <LogOut /> : <SignUp />}
         </Header>
       </div>
     </ConfigProvider>
