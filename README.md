@@ -76,20 +76,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## Genome Info Tech project contains components from React UI library "Ant Design" :
 
 
-| Ant Design component              | Genome Info Tech component usage  |
-| --------------------------------  | --------------------------------  |
-| Layout                            | Layout, Header, Footer, main content |
-| Menu                              | Header, Footer |
-| Typography                        | Home, Projects, Contact, News pages |
-| Button                            | Header, Contact Form, Modal window |
-| Row, Col                          | Home, Projects, Contact pages |
-| Space                             | Home, Projects, Contact pages |
-| Image                             | Home, Projects pages |
-| Divider                           | Projects page |
-| Input                             | Contact Form |
-| Select                            | Contact Form |
-| Carousel                          | Projects page |
-| Modal                             | Sign Up, Sign In components |
-| Form                              | Contact Form, Sign Up, Sign In components |
-| Checkbox                          | Sign Up component |
+| Ant Design component                                     | Genome Info Tech component usage  |
+| --------------------------------                         | --------------------------------  |
+| [Layout](https://ant.design/components/layout)           | Layout, Header, Footer, main content |
+| [Menu](https://ant.design/components/menu)               | Header, Footer |
+| [Typography](https://ant.design/components/typography)   | Home, Projects, Contact, News pages |
+| [Button](https://ant.design/components/button)           | Header, Contact Form, Modal window |
+| [Row, Col](https://ant.design/components/grid)           | Home, Projects, Contact pages |
+| [Space](https://ant.design/components/space)             | Home, Projects, Contact pages |
+| [Image](https://ant.design/components/image)             | Home, Projects pages |
+| [Divider](https://ant.design/components/divider)         | Projects page |
+| [Input](https://ant.design/components/input)             | Contact Form |
+| [Select](https://ant.design/components/select)           | Contact Form |
+| [Carousel](https://ant.design/components/carousel)       | Projects page |
+| [Modal](https://ant.design/components/modal)             | Sign Up, Sign In components |
+| [Form](https://ant.design/components/form)               | Contact Form, Sign Up, Sign In components |
+| [Checkbox](https://ant.design/components/checkbox)       | Sign Up component |
+| [Avatar](https://ant.design/components/avatar)           | Personal Cabinet component |
+| [Result](https://ant.design/components/result)           | Result success component |
+
 

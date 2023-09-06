@@ -1,5 +1,4 @@
 import "../../css/sign-in/SignUp.css";
-import Result from "./ResultSuccess";
 import { Link, useNavigate } from "react-router-dom";
 
 import {

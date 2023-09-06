@@ -13,7 +13,8 @@ const { Search } = Input;
 function NewsData() {
   const [inputType, setInputType] = useState("");
   let inputTypeHandlerOne = () => {
-    setInputType("events");
+      setInputType("events");
+
   };
   let inputTypeHandlerTwo = () => {
     setInputType("article");
@@ -22,7 +23,7 @@ function NewsData() {
     setInputType("");
   };
 
-  console.log(inputType);
+
   const isLaptop = useMediaQuery({ maxWidth: 768 });
   const inputStyle = isLaptop
     ? { width: 320, padding: "1em" }
@@ -69,11 +70,12 @@ function NewsData() {
           />
         </div>
         <div className="projects-content">
-          <Breadcrumb
+                  <Breadcrumb
+     
             items={[
               {
                 title: (
-                  <Button onClick={inputTypeHandlerAll} value="type">
+                  <Button onClick={inputTypeHandlerAll}>
                     All
                   </Button>
                 ),
@@ -81,19 +83,20 @@ function NewsData() {
 
               {
                 title: (
-                  <Button onClick={inputTypeHandlerOne} value="type">
+                  <Button onClick={inputTypeHandlerOne}>
                     Events
                   </Button>
                 ),
               },
               {
                 title: (
-                  <Button onClick={inputTypeHandlerTwo} value="type">
+                  <Button onClick={inputTypeHandlerTwo} >
                     Articles
                   </Button>
                 ),
               },
-            ]}
+                      ]
+                    }
           />
           <Divider />{" "}
           <Row justify="center" className="row-content" gutter={[16, 80]}>

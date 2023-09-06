@@ -34,7 +34,7 @@ function ModalWindow({ img, name, info }) {
           width={1000}
         >
           {" "}
-          <Row justify="center">
+          <Row justify="center"  gutter={32}>
             <Col lg={{ span: 10 }} md={{ span: 10 }} xs={{ span: 24 }}>
               {" "}
               <Image src={img} />
