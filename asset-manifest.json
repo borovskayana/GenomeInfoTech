@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/GenomeInfoTech/static/css/main.f8f1f363.css",
-    "main.js": "/GenomeInfoTech/static/js/main.1c696faa.js",
-    "static/js/787.ec08529b.chunk.js": "/GenomeInfoTech/static/js/787.ec08529b.chunk.js",
+    "main.css": "/GenomeInfoTech/static/css/main.a76e62c8.css",
+    "main.js": "/GenomeInfoTech/static/js/main.afca95f6.js",
+    "static/js/787.b8840fa7.chunk.js": "/GenomeInfoTech/static/js/787.b8840fa7.chunk.js",
     "static/media/co_founder_img_two.jpeg": "/GenomeInfoTech/static/media/co_founder_img_two.9dc320e5c83a5a591abd.jpeg",
     "static/media/projects.png": "/GenomeInfoTech/static/media/projects.f2063e2c327bfe206b81.png",
     "static/media/earth.jpg": "/GenomeInfoTech/static/media/earth.b2d021e12bb1e4f55004.jpg",
@@ -10,15 +10,17 @@
     "static/media/project2.png": "/GenomeInfoTech/static/media/project2.a5e9b6af9d8d3e51cd9e.png",
     "static/media/project3.png": "/GenomeInfoTech/static/media/project3.f62bf43fc62f8c48bf34.png",
     "static/media/project1.png": "/GenomeInfoTech/static/media/project1.cf2e907cfae9db97bfca.png",
+    "static/media/news-main-2.png": "/GenomeInfoTech/static/media/news-main-2.86be26c2a522a0148806.png",
+    "static/media/news-main-1.png": "/GenomeInfoTech/static/media/news-main-1.28c15dda3d723eeb3022.png",
+    "static/media/news.svg": "/GenomeInfoTech/static/media/news.83a41ecf1cb9e7d788c367b867c1652b.svg",
     "static/media/earth2.jpg": "/GenomeInfoTech/static/media/earth2.e20c3f5a761efd7bb36f.jpg",
-    "static/media/x-symbol.svg": "/GenomeInfoTech/static/media/x-symbol.ccfbb67aaed5cf56098d6eb89b97f74d.svg",
     "index.html": "/GenomeInfoTech/index.html",
-    "main.f8f1f363.css.map": "/GenomeInfoTech/static/css/main.f8f1f363.css.map",
-    "main.1c696faa.js.map": "/GenomeInfoTech/static/js/main.1c696faa.js.map",
-    "787.ec08529b.chunk.js.map": "/GenomeInfoTech/static/js/787.ec08529b.chunk.js.map"
+    "main.a76e62c8.css.map": "/GenomeInfoTech/static/css/main.a76e62c8.css.map",
+    "main.afca95f6.js.map": "/GenomeInfoTech/static/js/main.afca95f6.js.map",
+    "787.b8840fa7.chunk.js.map": "/GenomeInfoTech/static/js/787.b8840fa7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8f1f363.css",
-    "static/js/main.1c696faa.js"
+    "static/css/main.a76e62c8.css",
+    "static/js/main.afca95f6.js"
   ]
 }
