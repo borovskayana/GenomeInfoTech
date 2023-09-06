@@ -7,7 +7,7 @@ const { Title, Text } = Typography;
 function NewsList({ img, name, stage, info }) {
   return (
     <>
-      <Col span={6}>
+      <Col lg={{ span: 6 }} md={{ span: 6 }} sm={{ span: 8 }} xs={{ span: 16 }}>
         {" "}
         <Image src={img} />{" "}
         <Space direction="vertical" size="large">

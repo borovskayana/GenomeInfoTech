@@ -69,7 +69,7 @@ function NewsData() {
             style={inputStyle}
           />
         </div>
-        <div className="projects-content">
+        <div className="news-content">
                   <Breadcrumb
      
             items={[
