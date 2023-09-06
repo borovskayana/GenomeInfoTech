@@ -1,70 +1,54 @@
 import "../css/projects-css/ProjectsData.css";
-import symbolX from "../img/x-symbol.svg";
 
-import Modal from "react-modal";
-import modalStyle from "../utils/ModalStyles";
+import { Modal } from "antd";
+
 import { useState } from "react";
-import {
-  Col,
-  Row,
-  Image,
-  Typography,
-  Button,
-
-} from "antd";
+import { Col, Row, Image, Typography, Button } from "antd";
 
 const { Title, Text } = Typography;
 
+function ModalWindow({ img, name, info }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
-
-
-function ModalWindow( {img, name, info} ) {
-  const [modalIsOpen, setIsOpen] = useState(false);
-
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
   return (
     <>
-      <Button ghost type="primary" onClick={openModal}>
-        See More
-      </Button>
-      <Modal
-        isOpen={modalIsOpen}
-        ariaHideApp={false}
-        onRequestClose={closeModal}
-        style={modalStyle}
-        contentLabel="Example Modal"
-      >
-        <img
-          src={symbolX}
-          width="18em"
-          className="projects-img"
-          onClick={closeModal}
-        />
 
-        <Row justify="center">
-          <Col   lg={{ span: 10 }}
-              md={{ span: 10 }}
-              xs={{ span: 24 }}>
-            {" "}
-            <Image src={img} />
-          </Col>
-          <Col   lg={{ span: 10 }}
-              md={{ span: 10 }}
-              xs={{ span: 24 }}>
-            {" "}
-            <div className="progects-titles">
-              <Title level={4}>{name} </Title>
-              <Text>{info} </Text>
-            </div>
-          </Col>
-        </Row>
-      </Modal>
+        <Button ghost type="primary" onClick={showModal}>
+          See More
+        </Button>
+        <Modal
+          title=""
+          open={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+          footer={null}
+          width={1000}
+        >
+          {" "}
+          <Row justify="center">
+            <Col lg={{ span: 10 }} md={{ span: 10 }} xs={{ span: 24 }}>
+              {" "}
+              <Image src={img} />
+            </Col>
+            <Col lg={{ span: 10 }} md={{ span: 10 }} xs={{ span: 24 }}>
+              {" "}
+              <div className="progects-titles">
+                <Title level={4}>{name} </Title>
+                <Text>{info} </Text>
+              </div>
+            </Col>
+          </Row>
+        </Modal>
+
     </>
   );
 }

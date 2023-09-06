@@ -7,14 +7,12 @@ import SignUpModal from "./sign-in-components/SignUpModal";
 import ResultSuccess from "./sign-in-components/ResultSuccess";
 import PersonalCabinet from "./sign-in-components/PersonalCabinet";
 
-
 function Directions() {
-  const location = useLocation();
-  const previousLocation = location.state?.previousLocation;
+
 
   return (
     <div>
-      <Routes location={previousLocation || location}>
+      <Routes>
         <Route path="/" element={<Homepage />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
@@ -22,12 +20,6 @@ function Directions() {
         <Route path="/welcome" element={<ResultSuccess />}></Route>
         <Route path="/cabinet" element={<PersonalCabinet />}></Route>
       </Routes>
-      {previousLocation && (
-        <Routes>
-          <Route path="/modal/sign-up" element={<SignUpModal />} />
-      
-        </Routes>
-      )}
     </div>
   );
 }

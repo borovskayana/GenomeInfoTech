@@ -40,6 +40,7 @@ function HeaderElement() {
             mode="horizontal"
             items={items}
             onClick={({ key }) => navigate(key)}
+            defaultSelectedKeys={["/"]}
             style={{
               width: "35vw",
               background: "rgba(0, 0, 0, .0)",

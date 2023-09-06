@@ -2,7 +2,7 @@ import "../../css/sign-in/PersonalCabinet.css";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Form, Input, Modal } from "antd";
+import { Button, Form, Input, Modal, Avatar } from "antd";
 import { SettingOutlined, EditOutlined } from "@ant-design/icons";
 
 import { Layout, Typography, Row, Drawer } from "antd";
@@ -11,6 +11,11 @@ const { Content } = Layout;
 const { Title } = Typography;
 
 function PersonalCabinet() {
+  const [file, setFile] = useState();
+  function handleChange(e) {
+    console.log(e.target.files);
+    setFile(URL.createObjectURL(e.target.files[0]));
+  }
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -21,6 +26,18 @@ function PersonalCabinet() {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
+  const [isModalImgOpen, setIsModalImgOpen] = useState(false);
+  const showModalImg = () => {
+    setIsModalImgOpen(true);
+  };
+  const handleImgOk = () => {
+    setIsModalImgOpen(false);
+  };
+  const handleImgCancel = () => {
+    setIsModalImgOpen(false);
+  };
+
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -92,6 +109,20 @@ function PersonalCabinet() {
           </Form>
         </Modal>
 
+        <Row justify="center">
+          {" "}
+          <EditOutlined onClick={showModalImg} />{" "}
+          <Modal
+            title="Add Image"
+            open={isModalImgOpen}
+            onOk={handleImgOk}
+            onCancel={handleImgCancel}
+            footer={null}
+          >
+            <input type="file" onChange={handleChange} />
+          </Modal>
+          <Avatar src={file} size={200} onClick={showModalImg} />
+        </Row>
         <Drawer
           title="Settings"
           placement="right"

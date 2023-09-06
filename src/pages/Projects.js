@@ -2,6 +2,7 @@ import { Typography, Layout, ConfigProvider } from "antd";
 import ProjectsData from "../components/projects-components/ProjectsData";
 import FirstProjectData from "../components/projects-components/FirstProjectData";
 
+
 function Projects() {
   return (
     <>
