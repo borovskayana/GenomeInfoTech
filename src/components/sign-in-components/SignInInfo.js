@@ -1,5 +1,5 @@
 import "../../css/sign-in/SignUp.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import {
   Button,
@@ -42,7 +42,7 @@ function SignInInfo() {
           },
         }}
       >
-        <div className="modal" onClick={(e) => e.stopPropagation()}>
+  
           <Space direction="vertical" size="large" className="space-sign">
             <Title level={2} className="title-sign">
               Sign In
@@ -103,7 +103,7 @@ function SignInInfo() {
               </Form.Item>
             </Form>
           </Space>
-        </div>
+
       </ConfigProvider>
     </>
   );

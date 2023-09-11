@@ -8,6 +8,7 @@ function SignUpModal({ isModalOpen, handleOk, handleCancel, isLogin }) {
   return (
     <>
       <div className="modal-wrapper" onClick={() => navigate("/")}>
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
         <Modal
           title=""
           open={isModalOpen}
@@ -16,7 +17,8 @@ function SignUpModal({ isModalOpen, handleOk, handleCancel, isLogin }) {
           footer={null}
         >
           <SignUpForm isLogin={isLogin} />
-        </Modal>
+          </Modal>
+          </div>
       </div>
     </>
   );
