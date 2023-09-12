@@ -47,8 +47,6 @@ const tailFormItemLayout = {
 function SignUpInfo() {
   const navigate = useNavigate();
 
-
-
   const [form] = Form.useForm();
   function onFinish(values) {
     let formData = JSON.parse(localStorage.getItem("formData")) || [];
@@ -73,7 +71,9 @@ function SignUpInfo() {
       localStorage.setItem("formData", JSON.stringify(formData));
       navigate("/welcome");
     } else {
-      alert("Account with that email already exist. /n Please sign in or enter email that hasn't been used already!");
+      alert(
+        "Account with that email already exist. /n Please sign in or enter email that hasn't been used already!"
+      );
     }
   }
 
@@ -184,12 +184,12 @@ function SignUpInfo() {
             >
               <Row gutter={8}>
                 <Col span={12}>
+                  {/* Captca feature under coustruction (not work yet) */}
                   <Form.Item
                     name="captcha"
                     noStyle
                     rules={[
                       {
-                        required: true,
                         message: "Please input the captcha you got!",
                       },
                     ]}

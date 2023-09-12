@@ -2,7 +2,7 @@ import "../../css/sign-in/PersonalCabinet.css";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Form, Input, Modal, Avatar } from "antd";
+import { Button, Form, Input, Modal, Avatar, Space } from "antd";
 import { SettingOutlined, EditOutlined } from "@ant-design/icons";
 
 import { Layout, Typography, Row, Drawer } from "antd";
@@ -46,7 +46,8 @@ function PersonalCabinet() {
     setOpen(false);
   };
   const navigate = useNavigate();
-  const deleteAccount = () => {
+
+  const cleanLocalStorage = () => {
     localStorage.clear();
     navigate("/");
   };
@@ -55,21 +56,28 @@ function PersonalCabinet() {
   const usersData = localStorage.getItem("signUp");
 
   const email = result.find((x) => x.emailUsers == usersData).emailUsers;
-  console.log(email);
-  const index = result.findIndex((object) => {
+
+  const indexUser = result.findIndex((object) => {
     return object.emailUsers === email;
   });
 
-  console.log(result);
+
 
   const [changes] = Form.useForm();
 
   function onFinish(values) {
     console.log(values.nicknamechange);
-    result[index].nicknameUsers = values.nicknamechange;
+    result[indexUser].nicknameUsers = values.nicknamechange;
     localStorage.setItem("formData", JSON.stringify(result));
   }
   const nickname = result.find((x) => x.emailUsers == usersData).nicknameUsers;
+  console.log(result.splice(indexUser, indexUser + 1));
+  const deleteAccount = () => {
+    result.splice(indexUser, indexUser + 1);
+    localStorage.setItem("formData", JSON.stringify(result));
+    localStorage.removeItem("signUp");
+    navigate("/");
+  };
   return (
     <>
       <Content className="content-cabinet">
@@ -140,9 +148,18 @@ function PersonalCabinet() {
           onClose={onClose}
           open={open}
         >
-          <Button type="primary" onClick={deleteAccount}>
+              <Space direction="vertical" style={{display: "flex"}}>
+          <Row>
+           <Button type="primary" danger onClick={deleteAccount}>
             Delete Account
-          </Button>
+            </Button> </Row>
+            <Row>
+              {/* Temporary feature */}
+          <Button  type="dashed" danger onClick={cleanLocalStorage}>
+            Clean LocalStorage 
+            </Button>
+            </Row>
+            </Space>
         </Drawer>
       </Content>
     </>
