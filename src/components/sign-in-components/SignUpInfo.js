@@ -43,18 +43,40 @@ const tailFormItemLayout = {
     },
   },
 };
+
 function SignUpInfo() {
   const navigate = useNavigate();
+
+
+
   const [form] = Form.useForm();
   function onFinish(values) {
+    let formData = JSON.parse(localStorage.getItem("formData")) || [];
+
     console.log("Received values of form: ", values);
     localStorage.setItem("nickname", values.nickname);
     localStorage.setItem("email", values.email);
     localStorage.setItem("password", values.password);
     localStorage.setItem("signUp", values.email);
 
-    navigate("/welcome");
+    const emailUsers = localStorage.getItem("email");
+    const passwordUsers = localStorage.getItem("password");
+    const nicknameUsers = localStorage.getItem("nickname");
+    let exist =
+      formData.length &&
+      JSON.parse(localStorage.getItem("formData")).some(
+        (data) => data.emailUsers.toLowerCase() == emailUsers.toLowerCase()
+      );
+
+    if (!exist) {
+      formData.push({ emailUsers, passwordUsers, nicknameUsers });
+      localStorage.setItem("formData", JSON.stringify(formData));
+      navigate("/welcome");
+    } else {
+      alert("Account with that email already exist. /n Please sign in or enter email that hasn't been used already!");
+    }
   }
+
   return (
     <>
       <ConfigProvider

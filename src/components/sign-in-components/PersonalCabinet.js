@@ -50,15 +50,26 @@ function PersonalCabinet() {
     localStorage.clear();
     navigate("/");
   };
+  let result = JSON.parse(localStorage.getItem("formData"));
 
-  const nickname = localStorage.getItem("nickname");
+  const usersData = localStorage.getItem("signUp");
+
+  const email = result.find((x) => x.emailUsers == usersData).emailUsers;
+  console.log(email);
+  const index = result.findIndex((object) => {
+    return object.emailUsers === email;
+  });
+
+  console.log(result);
+
   const [changes] = Form.useForm();
 
   function onFinish(values) {
     console.log(values.nicknamechange);
-    localStorage.setItem("nickname", values.nicknamechange);
+    result[index].nicknameUsers = values.nicknamechange;
+    localStorage.setItem("formData", JSON.stringify(result));
   }
-
+  const nickname = result.find((x) => x.emailUsers == usersData).nicknameUsers;
   return (
     <>
       <Content className="content-cabinet">
