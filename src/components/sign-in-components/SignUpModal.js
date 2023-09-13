@@ -1,24 +1,27 @@
 import SignUpForm from "./SignUpForm";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Modal } from "antd";
 
 function SignUpModal({ isModalOpen, handleOk, handleCancel, isLogin }) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <>
-      <div className="modal-wrapper" onClick={() => navigate("/")}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
+      <div
+        className="modal-wrapper"
+        onClick={() => navigate(location.pathname)}
+      >
         <Modal
           title=""
           open={isModalOpen}
           onOk={handleOk}
           onCancel={handleCancel}
           footer={null}
+          width={600}
         >
           <SignUpForm isLogin={isLogin} />
-          </Modal>
-          </div>
+        </Modal>
       </div>
     </>
   );

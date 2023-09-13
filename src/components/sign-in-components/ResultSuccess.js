@@ -1,14 +1,13 @@
 import "../../css/Main.css";
-import React from 'react';
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Result, Layout } from 'antd';
+import { Button, Result, Layout } from "antd";
 const { Content } = Layout;
 const ResultSuccess = () => {
   const navigate = useNavigate();
-  const personalCabinet=()=>{ 
-
+  const personalCabinet = () => {
     navigate("/cabinet");
-}
+  };
 
   return (
     <Content className="content">
@@ -19,11 +18,10 @@ const ResultSuccess = () => {
         extra={[
           <Button type="primary" key="console" onClick={personalCabinet}>
             Go to Personal cabinet
-          </Button>
-
+          </Button>,
         ]}
       />
     </Content>
   );
-}
+};
 export default ResultSuccess;

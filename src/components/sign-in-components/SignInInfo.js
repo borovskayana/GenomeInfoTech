@@ -30,10 +30,9 @@ function SignInInfo() {
         alert("Please Enter valid Credential");
       }
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-    };
-
+  };
 
   return (
     <>

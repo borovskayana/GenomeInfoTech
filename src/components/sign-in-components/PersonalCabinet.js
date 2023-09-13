@@ -61,8 +61,6 @@ function PersonalCabinet() {
     return object.emailUsers === email;
   });
 
-
-
   const [changes] = Form.useForm();
 
   function onFinish(values) {
@@ -148,18 +146,19 @@ function PersonalCabinet() {
           onClose={onClose}
           open={open}
         >
-              <Space direction="vertical" style={{display: "flex"}}>
-          <Row>
-           <Button type="primary" danger onClick={deleteAccount}>
-            Delete Account
-            </Button> </Row>
+          <Space direction="vertical" style={{ display: "flex" }}>
+            <Row>
+              <Button type="primary" danger onClick={deleteAccount}>
+                Delete Account
+              </Button>{" "}
+            </Row>
             <Row>
               {/* Temporary feature */}
-          <Button  type="dashed" danger onClick={cleanLocalStorage}>
-            Clean LocalStorage 
-            </Button>
+              <Button type="dashed" danger onClick={cleanLocalStorage}>
+                Clean LocalStorage
+              </Button>
             </Row>
-            </Space>
+          </Space>
         </Drawer>
       </Content>
     </>
