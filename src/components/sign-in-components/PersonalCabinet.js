@@ -11,11 +11,8 @@ const { Content } = Layout;
 const { Title } = Typography;
 
 function PersonalCabinet() {
-  const [file, setFile] = useState();
-  function handleChange(e) {
-    console.log(e.target.files);
-    setFile(URL.createObjectURL(e.target.files[0]));
-  }
+
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -69,7 +66,16 @@ function PersonalCabinet() {
     localStorage.setItem("formData", JSON.stringify(result));
   }
   const nickname = result.find((x) => x.emailUsers == usersData).nicknameUsers;
-  console.log(result.splice(indexUser, indexUser + 1));
+
+
+  function handleChange(e) {
+
+    const img = URL.createObjectURL(e.target.files[0]);
+    result[indexUser].photoUsers = img;
+    localStorage.setItem("formData", JSON.stringify(result));
+  }
+
+  const images = result.find((x) => x.emailUsers == usersData).photoUsers;
   const deleteAccount = () => {
     result.splice(indexUser, indexUser + 1);
     localStorage.setItem("formData", JSON.stringify(result));
@@ -138,7 +144,7 @@ function PersonalCabinet() {
           >
             <input type="file" onChange={handleChange} />
           </Modal>
-          <Avatar src={file} size={200} onClick={showModalImg} />
+          <Avatar src={images} size={200} onClick={showModalImg} />
         </Row>
         <Drawer
           title="Settings"

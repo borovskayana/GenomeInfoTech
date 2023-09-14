@@ -37,7 +37,7 @@ function NewsData() {
     if (inputText === "") {
       return el;
     } else {
-      return el.name.toLowerCase().includes(inputText);
+      return el.name.toLowerCase().includes(inputText) || el.stage.toLowerCase().includes(inputText);
     }
   });
   const filteredTypeData = filteredData.filter((el) => {
@@ -61,7 +61,8 @@ function NewsData() {
 
   return (
     <>
-      <ConfigProvider theme={{ token: { colorSplit: "#00b96b" } }}>
+      <ConfigProvider theme={{ token: { colorSplit: "#00b96b" }
+    }}>
         <div style={{ textAlign: "end" }}>
           <Search
             placeholder="input search text"

@@ -56,10 +56,12 @@ function SignUpInfo() {
     localStorage.setItem("email", values.email);
     localStorage.setItem("password", values.password);
     localStorage.setItem("signUp", values.email);
+    localStorage.setItem("photo", "");
 
     const emailUsers = localStorage.getItem("email");
     const passwordUsers = localStorage.getItem("password");
     const nicknameUsers = localStorage.getItem("nickname");
+    const photoUsers = localStorage.getItem("photo");
     let exist =
       formData.length &&
       JSON.parse(localStorage.getItem("formData")).some(
@@ -67,7 +69,7 @@ function SignUpInfo() {
       );
 
     if (!exist) {
-      formData.push({ emailUsers, passwordUsers, nicknameUsers });
+      formData.push({ emailUsers, passwordUsers, nicknameUsers, photoUsers });
       localStorage.setItem("formData", JSON.stringify(formData));
       navigate("/welcome");
     } else {

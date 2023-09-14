@@ -2,3 +2,10 @@
     height: 100vh;
     padding: 1em 10em;
 }
+@media (max-width: 768px) {
+    .content-cabinet {
+        height: 100vh;
+        padding: 1em 1em;
+    }
+  }
+

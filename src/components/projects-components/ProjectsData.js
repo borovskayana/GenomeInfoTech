@@ -22,7 +22,7 @@ function ProjectsData() {
     if (inputText === "") {
       return el;
     } else {
-      return el.name.toLowerCase().includes(inputText);
+      return el.name.toLowerCase().includes(inputText) || el.stage.toLowerCase().includes(inputText);
     }
   });
 
