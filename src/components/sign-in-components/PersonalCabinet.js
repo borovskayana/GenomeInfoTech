@@ -2,17 +2,24 @@ import "../../css/sign-in/PersonalCabinet.css";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Form, Input, Modal, Avatar, Space } from "antd";
+import {
+  Button,
+  Form,
+  Input,
+  Modal,
+  Avatar,
+  Space,
+  Layout,
+  Typography,
+  Row,
+  Drawer,
+} from "antd";
 import { SettingOutlined, EditOutlined } from "@ant-design/icons";
-
-import { Layout, Typography, Row, Drawer } from "antd";
 
 const { Content } = Layout;
 const { Title } = Typography;
 
 function PersonalCabinet() {
-
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -67,9 +74,7 @@ function PersonalCabinet() {
   }
   const nickname = result.find((x) => x.emailUsers == usersData).nicknameUsers;
 
-
   function handleChange(e) {
-
     const img = URL.createObjectURL(e.target.files[0]);
     result[indexUser].photoUsers = img;
     localStorage.setItem("formData", JSON.stringify(result));
@@ -83,91 +88,84 @@ function PersonalCabinet() {
     navigate("/");
   };
   return (
-    <>
-      <Content className="content-cabinet">
-        <div style={{ textAlign: "right" }}>
-          <SettingOutlined onClick={showDrawer} style={{ fontSize: "2em" }} />
-        </div>
-        <Row justify="center">
-          <Title level={3}>User {nickname}</Title>{" "}
-          <EditOutlined onClick={showModal} />
-        </Row>
+    <Content className="content-cabinet">
+      <div style={{ textAlign: "right" }}>
+        <SettingOutlined onClick={showDrawer} style={{ fontSize: "2em" }} />
+      </div>
+      <Row justify="center">
+        <Title level={3}>User {nickname}</Title>{" "}
+        <EditOutlined onClick={showModal} />
+      </Row>
 
+      <Modal
+        title="Change Data"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={null}
+      >
+        <Form
+          form={changes}
+          name="changes"
+          onFinish={onFinish}
+          scrollToFirstError
+        >
+          <Form.Item
+            name="nicknamechange"
+            label="Nickname"
+            tooltip="What do you want others to call you?"
+            rules={[
+              {
+                required: true,
+                message: "Please input your nickname!",
+                whitespace: true,
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item>
+            <Button
+              type="primary"
+              htmlType="submit"
+              onClick={() => window.location.reload()}
+            >
+              Save changes
+            </Button>
+          </Form.Item>
+        </Form>
+      </Modal>
+
+      <Row justify="center">
+        {" "}
+        <EditOutlined onClick={showModalImg} />{" "}
         <Modal
-          title="Change Data"
-          open={isModalOpen}
-          onOk={handleOk}
-          onCancel={handleCancel}
+          title="Add Image"
+          open={isModalImgOpen}
+          onOk={handleImgOk}
+          onCancel={handleImgCancel}
           footer={null}
         >
-          <Form
-            form={changes}
-            name="changes"
-            onFinish={onFinish}
-            scrollToFirstError
-          >
-            <Form.Item
-              name="nicknamechange"
-              label="Nickname"
-              tooltip="What do you want others to call you?"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your nickname!",
-                  whitespace: true,
-                },
-              ]}
-            >
-              <Input />
-            </Form.Item>
-            <Form.Item>
-              <Button
-                type="primary"
-                htmlType="submit"
-                onClick={() => window.location.reload()}
-              >
-                Save changes
-              </Button>
-            </Form.Item>
-          </Form>
+          <input type="file" onChange={handleChange} />
         </Modal>
-
-        <Row justify="center">
-          {" "}
-          <EditOutlined onClick={showModalImg} />{" "}
-          <Modal
-            title="Add Image"
-            open={isModalImgOpen}
-            onOk={handleImgOk}
-            onCancel={handleImgCancel}
-            footer={null}
-          >
-            <input type="file" onChange={handleChange} />
-          </Modal>
-          <Avatar src={images} size={200} onClick={showModalImg} />
-        </Row>
-        <Drawer
-          title="Settings"
-          placement="right"
-          onClose={onClose}
-          open={open}
-        >
-          <Space direction="vertical" style={{ display: "flex" }}>
-            <Row>
-              <Button type="primary" danger onClick={deleteAccount}>
-                Delete Account
-              </Button>{" "}
-            </Row>
-            <Row>
-              {/* Temporary feature */}
-              <Button type="dashed" danger onClick={cleanLocalStorage}>
-                Clean LocalStorage
-              </Button>
-            </Row>
-          </Space>
-        </Drawer>
-      </Content>
-    </>
+        <Avatar src={images} size={200} onClick={showModalImg} />
+      </Row>
+      <Drawer title="Settings" placement="right" onClose={onClose} open={open}>
+        <Space direction="vertical" style={{ display: "flex" }}>
+          <Row>
+            <Button type="primary" danger onClick={deleteAccount}>
+              Delete Account
+            </Button>{" "}
+          </Row>
+          <Row>
+            {/* Temporary feature */}
+            <Button type="dashed" danger onClick={cleanLocalStorage}>
+              Clean LocalStorage
+            </Button>
+          </Row>
+        </Space>
+      </Drawer>
+    </Content>
   );
 }
 export default PersonalCabinet;

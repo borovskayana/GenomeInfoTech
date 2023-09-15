@@ -6,7 +6,6 @@ import CofoundersTitle from "./CoFoundersTitle";
 
 import { Row, Space } from "antd";
 
-
 function CofoundersData() {
   const listItems = cofoundersInfo.map((info, index) => (
     <HomeCoFounders
@@ -22,9 +21,7 @@ function CofoundersData() {
     <div className="content-cofounders">
       <Space direction="vertical" size={48}>
         <CofoundersTitle />
-        <Row justify="center">
-          {listItems}
-        </Row>
+        <Row justify="center">{listItems}</Row>
       </Space>
     </div>
   );

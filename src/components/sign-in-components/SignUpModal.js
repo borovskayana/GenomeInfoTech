@@ -7,23 +7,18 @@ function SignUpModal({ isModalOpen, handleOk, handleCancel, isLogin }) {
   const location = useLocation();
 
   return (
-    <>
-      <div
-        className="modal-wrapper"
-        onClick={() => navigate(location.pathname)}
+    <div className="modal-wrapper" onClick={() => navigate(location.pathname)}>
+      <Modal
+        title=""
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={null}
+        width={600}
       >
-        <Modal
-          title=""
-          open={isModalOpen}
-          onOk={handleOk}
-          onCancel={handleCancel}
-          footer={null}
-          width={600}
-        >
-          <SignUpForm isLogin={isLogin} />
-        </Modal>
-      </div>
-    </>
+        <SignUpForm isLogin={isLogin} />
+      </Modal>
+    </div>
   );
 }
 export default SignUpModal;

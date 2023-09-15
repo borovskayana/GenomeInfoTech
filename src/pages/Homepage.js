@@ -15,14 +15,13 @@ function Homepage() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div>
-
+      <>
         <HomeSlogan />
         <Space direction="vertical" size="large">
           <HomeInfoAbout />
           <CofoundersData />
         </Space>
-      </div>
+      </>
     </Layout>
   );
 }

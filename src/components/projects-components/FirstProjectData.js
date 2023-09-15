@@ -1,8 +1,8 @@
 import "../../css/projects-css/ProjectsData.css";
 import projectsInfo from "../../data/ProjectsInfo";
 import FirstProject from "./FirstProject";
-import { Typography, Divider, ConfigProvider } from "antd";
-import { Carousel } from "antd";
+import { Typography, Divider, ConfigProvider, Carousel } from "antd";
+
 const { Title } = Typography;
 
 function FirstProjectData() {
@@ -21,16 +21,14 @@ function FirstProjectData() {
     <ConfigProvider
       theme={{ token: { colorBgContainer: "rgba(0, 0, 0, .6)" } }}
     >
-      <div>
-        <Carousel autoplay style={{ paddingBottom: "5em" }}>
-          {" "}
-          {mainProjects}{" "}
-        </Carousel>
-        <div className="first-project">
-          <Divider plain>
-            <Title level={3}>Projects</Title>
-          </Divider>
-        </div>
+      <Carousel autoplay style={{ paddingBottom: "5em" }}>
+        {" "}
+        {mainProjects}{" "}
+      </Carousel>
+      <div className="first-project">
+        <Divider plain>
+          <Title level={3}>Projects</Title>
+        </Divider>
       </div>
     </ConfigProvider>
   );

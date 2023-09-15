@@ -5,12 +5,10 @@ import ConfigProviderAntd from "./utils/ConfigProviderAntd";
 function App() {
   return (
     <ConfigProviderAntd>
-    <Layout>
-      <div>
+      <Layout>
         <Directions />
-      </div>
       </Layout>
-      </ConfigProviderAntd>
+    </ConfigProviderAntd>
   );
 }
 

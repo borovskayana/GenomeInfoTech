@@ -21,14 +21,12 @@ function NewsDataMain() {
   ));
 
   return (
-    <>
-      <div className="news-main-content">
-        {" "}
-        <Row justify="center" className="row-content" gutter={[16, 24]}>
-          {listProjects}
-        </Row>
-      </div>
-    </>
+    <div className="news-main-content">
+      {" "}
+      <Row justify="center" className="row-content" gutter={[16, 24]}>
+        {listProjects}
+      </Row>
+    </div>
   );
 }
 export default NewsDataMain;

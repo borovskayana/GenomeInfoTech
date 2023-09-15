@@ -1,8 +1,10 @@
 import "../../css/Main.css";
 import React from "react";
+
 import { useNavigate } from "react-router-dom";
 import { Button, Result, Layout } from "antd";
 const { Content } = Layout;
+
 const ResultSuccess = () => {
   const navigate = useNavigate();
   const personalCabinet = () => {

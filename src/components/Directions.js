@@ -1,15 +1,12 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Homepage from "../pages/Homepage";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
 import News from "../pages/News";
-import SignUpModal from "./sign-in-components/SignUpModal";
 import ResultSuccess from "./sign-in-components/ResultSuccess";
 import PersonalCabinet from "./sign-in-components/PersonalCabinet";
 
 function Directions() {
-
-
   return (
     <div>
       <Routes>

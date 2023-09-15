@@ -13,23 +13,21 @@ function HomeSlogan() {
 
   return (
     <ConfigProvider theme={{ token: { colorText: "#ffffff" } }}>
-      <div>
-        <Content className="content-slogan">
-          <div className="slogan-box">
-            {isLaptop ? (
-              <Title level={4}>{slogan}</Title>
-            ) : (
-              <Title level={2}>{slogan}</Title>
-            )}
+      <Content className="content-slogan">
+        <div className="slogan-box">
+          {isLaptop ? (
+            <Title level={4}>{slogan}</Title>
+          ) : (
+            <Title level={2}>{slogan}</Title>
+          )}
 
-            {isLaptop ? (
-              <Title level={5}>{fields}</Title>
-            ) : (
-              <Title level={4}>{fields}</Title>
-            )}
-          </div>
-        </Content>
-      </div>
+          {isLaptop ? (
+            <Title level={5}>{fields}</Title>
+          ) : (
+            <Title level={4}>{fields}</Title>
+          )}
+        </div>
+      </Content>
     </ConfigProvider>
   );
 }

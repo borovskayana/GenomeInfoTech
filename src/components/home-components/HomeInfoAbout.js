@@ -6,16 +6,15 @@ const { Paragraph } = Typography;
 
 function HomeInfoAbout() {
   return (
-    <div>
-        <ConfigProvider
-            theme={{
-              token: { colorText: "rgba(0, 0, 0, .7)", colorSplit: "#00b96b" },
-            }}
-          >
+    <ConfigProvider
+      theme={{
+        token: { colorText: "rgba(0, 0, 0, .7)", colorSplit: "#00b96b" },
+      }}
+    >
       <Content className="content-style">
         <Space direction="vertical" size="large">
           <Divider />
-          <div>
+          <>
             <Paragraph className="paragraph-style">
               Genome InfoTech a startup that provides cutting-edge data
               analytics and machine learning solutions for the healthcare
@@ -42,12 +41,11 @@ function HomeInfoAbout() {
               central to the web designing process. Websites have an array of
               elements presented in ways that make them easy to navigate.
             </Paragraph>
-          </div>
-          <Divider/>
+          </>
+          <Divider />
         </Space>
-        </Content>
-      </ConfigProvider>
-    </div>
+      </Content>
+    </ConfigProvider>
   );
 }
 export default HomeInfoAbout;

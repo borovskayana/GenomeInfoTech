@@ -5,14 +5,12 @@ const { Title } = Typography;
 
 function CofoundersTitle() {
   return (
-    <ConfigProvider theme={{ token: { colorText: "#ffffff", colorSplit: "#ffffff"  } }}>
-      <div>
-        <Divider className="co-founder-title" plain>
-        <Title  level={3}>
-          Co-founders
-          </Title>
-          </Divider>
-      </div>
+    <ConfigProvider
+      theme={{ token: { colorText: "#ffffff", colorSplit: "#ffffff" } }}
+    >
+      <Divider className="co-founder-title" plain>
+        <Title level={3}>Co-founders</Title>
+      </Divider>
     </ConfigProvider>
   );
 }
